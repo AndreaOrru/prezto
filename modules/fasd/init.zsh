@@ -51,4 +51,7 @@ function fasd_cd {
 #
 
 # Changes the current working directory interactively.
-alias j='fasd_cd -i'
+j() {
+  local dir
+  dir="$(fasd -Rdl "$1" | fzf --height=10 --reverse -1 -0 --no-sort +m)" && cd "${dir}" || return 1
+}
