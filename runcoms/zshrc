@@ -16,14 +16,31 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# FZF.
+export FZF_DEFAULT_OPTS='--exact'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Aliases.
+
+###############
+#   Aliases   #
+###############
+
+# Misc:
 alias diff=colordiff
 alias p=pacaur
 alias vi=nvim
 
-# Functions.
+# Tmux:
+alias misc="tmux attach -t misc || tmux new -s misc"
+alias t="tmuxinator start"
+alias ta="tmux attach -t"
+alias tl="tmux list-sessions"
+
+
+#################
+#   Functions   #
+#################
+
 ncmpcpp() {
   if ! pidof -x mopidy; then
     nohup mopidy > /dev/null 2>&1 &
@@ -34,10 +51,7 @@ ncmpcpp() {
 song() {
   mpc search -f "%file% %artist% - %title% (%album%)" title "$*" | grep "^spotify:track" | fzf -m --with-nth 2.. | cut -d ' ' -f 1 | mpc add
 }
+
 album() {
   mpc search -f "%file% %album%" artist "$*" | grep "^spotify:album" | fzf -m --with-nth 2.. | cut -d ' ' -f 1 | mpc add
 }
-
-# FZF.
-export FZF_DEFAULT_OPTS='--exact'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
