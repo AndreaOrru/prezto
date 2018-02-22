@@ -27,14 +27,15 @@ export FZF_DEFAULT_OPTS='--exact'
 
 # Misc:
 alias diff=colordiff
+alias ffeh='feh --scale-down --recursive'
 alias p=pacaur
 alias vi=nvim
 
 # Tmux:
-alias misc="tmux attach -t misc || tmux new -s misc"
-alias t="tmuxinator start"
-alias ta="tmux attach -t"
-alias tl="tmux list-sessions"
+alias misc='tmux attach -t misc || tmux new -s misc'
+alias t='tmuxinator start'
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
 
 
 #################
