@@ -27,10 +27,10 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Misc.
 alias diff=colordiff
-alias e=em
+alias e='emacsclient -n'
 alias ffeh='feh --scale-down --recursive'
 alias p=pacaur
-alias vi='emacsclient -t'
+alias vi=nvim
 
 # Tmux.
 alias misc='tmux attach -t misc || tmux new -s misc'
