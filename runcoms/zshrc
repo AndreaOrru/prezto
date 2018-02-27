@@ -28,6 +28,7 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 # Misc.
 alias diff=colordiff
 alias e='emacsclient -n'
+alias em="emacsclient -a '' -t"
 alias ffeh='feh --scale-down --recursive'
 alias p=pacaur
 alias vi=nvim
