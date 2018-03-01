@@ -54,10 +54,10 @@ alias tl='tmux list-sessions'
 #################
 
 ncmpcpp() {
-  if ! pidof -x mopidy; then
+  if ! pidof -x mopidy > /dev/null; then
     nohup mopidy > /dev/null 2>&1 &
   fi
-  /usr/bin/ncmpcpp
+  /usr/bin/ncmpcpp $@
 }
 
 song() {
