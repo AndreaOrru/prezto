@@ -38,6 +38,10 @@ alias ffeh='feh --scale-down --recursive'
 alias p=pacaur
 alias vi=nvim
 
+# SSH.
+alias wild="mosh --ssh='ssh -p ${WILD_PORT}' ${WILD_ADDR}"
+alias wildproxy="autossh -M 0 -o 'ServerAliveInterval 45' -o 'ServerAliveCountMax 2' -TND ${PROXY_PORT} -p ${WILD_PORT} ${WILD_ADDR}"
+
 # Tmux.
 alias misc='tmux attach -t misc || tmux new -s misc'
 alias t='tmuxinator start'
