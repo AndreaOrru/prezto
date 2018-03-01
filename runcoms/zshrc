@@ -10,6 +10,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source private stuff.
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.private" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc.private"
+fi
+
 # FZF.
 export FZF_DEFAULT_OPTS='--exact'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
