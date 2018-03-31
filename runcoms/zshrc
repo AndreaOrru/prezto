@@ -22,9 +22,6 @@ export FZF_DEFAULT_OPTS='--exact'
 # Python startup file.
 export PYTHONSTARTUP=~/.pythonrc
 
-# Rust source path.
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-
 
 ###############
 #   Aliases   #
