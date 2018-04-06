@@ -19,6 +19,9 @@ fi
 export FZF_DEFAULT_OPTS='--exact'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Todoist Peco completion.
+source /usr/share/todoist/todoist_functions.sh
+
 # Python startup file.
 export PYTHONSTARTUP=~/.pythonrc
 
@@ -33,6 +36,7 @@ alias e='emacsclient -n'
 alias em="emacsclient -a '' -t"
 alias ffeh='feh --scale-down --recursive'
 alias p=pacaur
+alias t='todoist --color --indent'
 alias vi=nvim
 
 # SSH.
@@ -63,3 +67,6 @@ song() {
 album() {
   mpc search -f "%file% %album%" artist "$*" | grep "^spotify:album" | fzf -m --with-nth 2.. | cut -d ' ' -f 1 | mpc add
 }
+
+# Quickly add task to Todoist.
+q() { t q "$*" }
