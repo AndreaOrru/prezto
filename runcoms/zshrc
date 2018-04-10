@@ -22,8 +22,8 @@ export FZF_DEFAULT_OPTS='--exact'
 # Todoist Peco completion.
 source /usr/share/todoist/todoist_functions.sh
 
-# Python startup file.
-export PYTHONSTARTUP=~/.pythonrc
+export PYTHONSTARTUP=~/.pythonrc  # Python startup file.
+export BUNDLE_PATH=~/.bundle      # Install bundle gems locally.
 
 
 ###############
