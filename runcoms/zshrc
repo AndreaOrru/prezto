@@ -69,4 +69,4 @@ album() {
 }
 
 # Quickly add task to Todoist.
-q() { t q "$*" }
+q() { [ "$#" -ne 0 ] && t q "$*" }
