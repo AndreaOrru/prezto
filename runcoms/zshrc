@@ -35,6 +35,7 @@ alias diff=colordiff
 alias e='emacsclient -n'
 alias em="emacsclient -a '' -t"
 alias ffeh='feh --scale-down --recursive'
+alias git=hub
 alias p=pacaur
 alias t='todoist --color --indent'
 alias vi=nvim
