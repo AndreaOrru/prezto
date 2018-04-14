@@ -12,3 +12,9 @@ fi
 
 # Disable Less history.
 export LESSHISTFILE=/dev/null
+
+# Install NPM packages locally.
+export npm_config_prefix=~/.npm/node_modules
+
+export PYTHONSTARTUP=~/.pythonrc  # Python startup file.
+export BUNDLE_PATH=~/.bundle      # Install bundle gems locally.
