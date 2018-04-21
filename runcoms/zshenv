@@ -10,14 +10,8 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# Disable Less history.
-export LESSHISTFILE=/dev/null
-
-# Install NPM packages locally.
-export npm_config_prefix=~/.npm/node_modules
-
+export LESSHISTFILE=/dev/null     # Disable Less history.
 export PYTHONSTARTUP=~/.pythonrc  # Python startup file.
-export BUNDLE_PATH=~/.bundle      # Install bundle gems locally.
 
 # Better scrolling on Firefox.
 export MOZ_USE_XINPUT2=1
